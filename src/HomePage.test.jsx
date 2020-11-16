@@ -11,4 +11,6 @@ const { getByText } = render((
 ));
 
   expect(getByText('Flexible')).not.toBeNull();
+  expect(getByText('Get any habit successfully!')).not.toBeNull();
+  expect(getByText('Get it started!')).not.toBeNull();
 });
