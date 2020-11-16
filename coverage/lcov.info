@@ -1,9 +1,9 @@
 TN:
 SF:src/GuidePage.jsx
-FN:3,App
+FN:3,GuidePage
 FNF:1
 FNH:1
-FNDA:1,App
+FNDA:1,GuidePage
 DA:4,1
 LF:1
 LH:1
@@ -12,10 +12,10 @@ BRH:0
 end_of_record
 TN:
 SF:src/HomePage.jsx
-FN:3,App
+FN:3,HomePage
 FNF:1
 FNH:1
-FNDA:1,App
+FNDA:1,HomePage
 DA:4,1
 LF:1
 LH:1

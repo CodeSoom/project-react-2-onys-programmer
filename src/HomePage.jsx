@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function App() {
+export default function HomePage() {
   return (
     <>
     <h1>Flexible</h1>

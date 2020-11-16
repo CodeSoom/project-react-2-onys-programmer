@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function App() {
+export default function GuidePage() {
   return (
     <>
     <h1>Flexible에 오신 것을 환영합니다!</h1>
