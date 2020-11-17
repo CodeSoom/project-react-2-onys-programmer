@@ -15,8 +15,8 @@ SF:src/GuidePage.jsx
 FN:5,GuidePage
 FNF:1
 FNH:1
-FNDA:1,GuidePage
-DA:6,1
+FNDA:2,GuidePage
+DA:6,2
 LF:1
 LH:1
 BRF:0
@@ -27,8 +27,8 @@ SF:src/HomePage.jsx
 FN:5,HomePage
 FNF:1
 FNH:1
-FNDA:7,HomePage
-DA:6,7
+FNDA:2,HomePage
+DA:6,2
 LF:1
 LH:1
 BRF:0
@@ -39,8 +39,8 @@ SF:src/InputHabitPage.jsx
 FN:5,InputNamePage
 FNF:1
 FNH:1
-FNDA:1,InputNamePage
-DA:6,1
+FNDA:2,InputNamePage
+DA:6,2
 LF:1
 LH:1
 BRF:0
@@ -51,8 +51,8 @@ SF:src/InputNamePage.jsx
 FN:5,InputNamePage
 FNF:1
 FNH:1
-FNDA:1,InputNamePage
-DA:6,1
+FNDA:2,InputNamePage
+DA:6,2
 LF:1
 LH:1
 BRF:0
@@ -63,8 +63,8 @@ SF:src/NotFoundPage.jsx
 FN:3,NotFoundPage
 FNF:1
 FNH:1
-FNDA:1,NotFoundPage
-DA:4,1
+FNDA:2,NotFoundPage
+DA:4,2
 LF:1
 LH:1
 BRF:0
@@ -75,8 +75,8 @@ SF:src/VerticalFlexibility.jsx
 FN:3,VerticalFlexibility
 FNF:1
 FNH:1
-FNDA:1,VerticalFlexibility
-DA:4,1
+FNDA:2,VerticalFlexibility
+DA:4,2
 LF:1
 LH:1
 BRF:0

@@ -12,7 +12,10 @@ describe('App', () => {
   context('with path /', () => {
     it('renders homepage', () => {
       const { getByText } = render((
-        <App />
+        <MemoryRouter initialEntries={['/']}>
+          <App />
+
+        </MemoryRouter>
       ));
 
       expect(getByText('Flexible')).not.toBeNull();
@@ -27,7 +30,7 @@ describe('App', () => {
         </MemoryRouter>
       ));
 
-      expect(getByText('환영합니다')).not.toBeNull();
+      expect(getByText(/환영합니다/)).not.toBeNull();
     });
   });
 
@@ -39,7 +42,7 @@ describe('App', () => {
         </MemoryRouter>
       ));
 
-      expect(getByText('이름을 입력해주세요')).not.toBeNull();
+      expect(getByText(/이름을 입력해주세요/)).not.toBeNull();
     });
   });
 
@@ -51,7 +54,7 @@ describe('App', () => {
         </MemoryRouter>
       ));
 
-      expect(getByText('무엇을 습관으로 만들고 싶나요?')).not.toBeNull();
+      expect(getByText(/무엇을 습관으로 만들고 싶나요?/)).not.toBeNull();
     });
   });
 
@@ -67,16 +70,16 @@ describe('App', () => {
     });
   });
 
-    context('with a path that is not exist', () => {
-      it('renders not foundpage', () => {
-        const { getByText } = render((
-          <MemoryRouter initialEntries={['/anyPathThatIsNotExist']}>
-            <App />
-          </MemoryRouter>
-        ));
-  
-        expect(getByText('not found')).not.toBeNull();
-      });
+  context('with a path that is not exist', () => {
+    it('renders not foundpage', () => {
+      const { getByText } = render((
+        <MemoryRouter initialEntries={['/anyPathThatIsNotExist']}>
+          <App />
+        </MemoryRouter>
+      ));
+
+      expect(getByText(/not found/)).not.toBeNull();
+    });
   });
 
 });

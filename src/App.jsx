@@ -16,15 +16,15 @@ import VerticalFlexibility from './VerticalFlexibility';
 export default function App() {
 
   return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route exact path="/guide" component={GuidePage} />
-          <Route exact path="/guide/inputname" component={InputNamePage} />
-          <Route path="/guide/inputhabit" component={InputHabitPage} />
-          <Route path="/guide/verticalflexibility" component={VerticalFlexibility} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </BrowserRouter>
+    <div>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/guide" component={GuidePage} />
+        <Route exact path="/guide/inputname" component={InputNamePage} />
+        <Route path="/guide/inputhabit" component={InputHabitPage} />
+        <Route path="/guide/verticalflexibility" component={VerticalFlexibility} />
+        <Route component={NotFoundPage} />
+      </Switch>
+    </div>
   );
 }
