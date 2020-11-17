@@ -7,7 +7,7 @@ export default function HomePage() {
     <>
     <h1>Flexible</h1>
     <p>Get any habit successfully!</p>
-    <p><Link to="/guide">Get it started!</Link></p>
+    <button><Link to="/guide">Get it started!</Link></button>
     </>
   );
 }
