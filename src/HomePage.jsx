@@ -6,7 +6,7 @@ export default function HomePage() {
   return (
     <>
     <h1>Flexible</h1>
-    <p>Get any habit successfully!</p>
+    <h3>Get any habit successfully!</h3>
     <button><Link to="/guide">Get it started!</Link></button>
     </>
   );

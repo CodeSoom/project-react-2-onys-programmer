@@ -31,6 +31,18 @@ describe('App', () => {
     });
   });
 
+  context('with path /guide/inputname', () => {
+    it('renders input name page', () => {
+      const { getByText } = render((
+        <MemoryRouter initialEntries={['/guide/inputname']}>
+          <App />
+        </MemoryRouter>
+      ));
+
+      expect(getByText('이름을 입력해주세요')).not.toBeNull();
+    });
+  });
+
     context('with a path that is not exist', () => {
       it('renders not foundpage', () => {
         const { getByText } = render((
