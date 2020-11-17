@@ -11,6 +11,7 @@ import GuidePage from './GuidePage';
 import NotFoundPage from './NotFoundPage';
 import InputNamePage from './InputNamePage';
 import InputHabitPage from './InputHabitPage';
+import VerticalFlexibility from './VerticalFlexibility';
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
           <Route exact path="/guide" component={GuidePage} />
           <Route exact path="/guide/inputname" component={InputNamePage} />
           <Route path="/guide/inputhabit" component={InputHabitPage} />
+          <Route path="/guide/verticalflexibility" component={VerticalFlexibility} />
           <Route component={NotFoundPage} />
         </Switch>
       </BrowserRouter>

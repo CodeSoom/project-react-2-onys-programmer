@@ -43,7 +43,7 @@ describe('App', () => {
     });
   });
 
-  context('with path /guide/input habit', () => {
+  context('with path /guide/inputhabit', () => {
     it('renders input habit page', () => {
       const { getByText } = render((
         <MemoryRouter initialEntries={['/guide/inputhabit']}>
@@ -52,6 +52,18 @@ describe('App', () => {
       ));
 
       expect(getByText('무엇을 습관으로 만들고 싶나요?')).not.toBeNull();
+    });
+  });
+
+  context('with path /guide/verticalflexibility', () => {
+    it('renders verticalflexibility page', () => {
+      const { getByText } = render((
+        <MemoryRouter initialEntries={['/guide/verticalflexibility']}>
+          <App />
+        </MemoryRouter>
+      ));
+
+      expect(getByText(/수직적 유연성/)).not.toBeNull();
     });
   });
 
