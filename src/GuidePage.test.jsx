@@ -2,14 +2,16 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 import GuidePage from './GuidePage';
 
 test('GuidePage', () => {
 
   const { getByText } = render((
-    <GuidePage />
+    <MemoryRouter>
+      <GuidePage />
+    </MemoryRouter>
   ));
 
   expect(getByText('Flexible에 오신 것을 환영합니다!')).not.toBeNull();
