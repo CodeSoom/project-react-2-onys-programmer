@@ -43,6 +43,18 @@ describe('App', () => {
     });
   });
 
+  context('with path /guide/input habit', () => {
+    it('renders input habit page', () => {
+      const { getByText } = render((
+        <MemoryRouter initialEntries={['/guide/inputhabit']}>
+          <App />
+        </MemoryRouter>
+      ));
+
+      expect(getByText('무엇을 습관으로 만들고 싶나요?')).not.toBeNull();
+    });
+  });
+
     context('with a path that is not exist', () => {
       it('renders not foundpage', () => {
         const { getByText } = render((

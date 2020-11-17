@@ -10,6 +10,7 @@ import HomePage from './HomePage';
 import GuidePage from './GuidePage';
 import NotFoundPage from './NotFoundPage';
 import InputNamePage from './InputNamePage';
+import InputHabitPage from './InputHabitPage';
 
 export default function App() {
 
@@ -18,7 +19,8 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/guide" component={GuidePage} />
-          <Route path="/guide/inputname" component={InputNamePage} />
+          <Route exact path="/guide/inputname" component={InputNamePage} />
+          <Route path="/guide/inputhabit" component={InputHabitPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </BrowserRouter>
