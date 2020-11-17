@@ -15,8 +15,8 @@ export default function App() {
     <>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={HomePage}></Route>
-          <Route path="/guide" component={GuidePage}></Route>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/guide" component={GuidePage} />
         </Switch>
       </BrowserRouter>
     </>
