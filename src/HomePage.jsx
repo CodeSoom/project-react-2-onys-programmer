@@ -5,7 +5,7 @@ export default function HomePage() {
     <>
     <h1>Flexible</h1>
     <p>Get any habit successfully!</p>
-    <button>Get it started!</button>
+    <a href="/guide">Get it started!</a>
     </>
   );
 }
