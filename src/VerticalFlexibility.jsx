@@ -21,7 +21,7 @@ export default function VerticalFlexibility() {
       </div>
       <p></p>
       <div>
-        <label>조금은 약한 옵션. Joyful<br>
+        <label>충분히 효과적인 옵션. Joyful<br>
         </br><Input type="text" placeholder="헬스장 가서 스트레칭 후 근력운동"></Input></label>
         <button>입력</button>
       </div>
