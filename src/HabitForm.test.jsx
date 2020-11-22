@@ -3,6 +3,7 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 
 import HabitForm from './HabitForm'
+import { MemoryRouter } from 'react-router-dom';
 
 test('HabitForm', () => {
   const habit = {
@@ -14,11 +15,13 @@ test('HabitForm', () => {
   const handleClick = jest.fn();
 
   const { getByDisplayValue, getByText } = render((
-    <HabitForm 
-    habit={habit}
-    onChange={handleChange}
-    onClick={handleClick}
-    />
+    <MemoryRouter>
+      <HabitForm
+        habit={habit}
+        onChange={handleChange}
+        onClick={handleClick}
+      />
+    </MemoryRouter>
   ))
 
   expect(getByDisplayValue('김태')).not.toBeNull();

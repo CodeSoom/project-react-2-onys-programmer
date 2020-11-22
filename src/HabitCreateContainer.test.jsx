@@ -5,6 +5,7 @@ import { render, fireEvent } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import HabitCreateContainer from './HabitCreateContainer'
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('react-redux');
 
@@ -20,9 +21,11 @@ test('HabitCreateContainer', () => {
   }))
 
   const { getByDisplayValue, queryByText } = render((
-    <HabitCreateContainer />
+    <MemoryRouter>
+      <HabitCreateContainer />
+    </MemoryRouter>
   ))
-  
+
   expect(getByDisplayValue('김태')).not.toBeNull();
   expect(getByDisplayValue('운동하')).not.toBeNull();
 
