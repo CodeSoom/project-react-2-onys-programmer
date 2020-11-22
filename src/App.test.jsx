@@ -8,7 +8,7 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getByPlaceholderText, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
 import App from './App';
 
@@ -23,7 +23,12 @@ function renderApp({ path }) {
     useDispatch.mockImplementation(() => dispatch);
 
     useSelector.mockImplementation((selector) => selector({
-      habitInfo: [],
+      habitInfo: [
+        {
+          userName: '',
+          objectHabit: '',
+        }
+      ],
       habit: {
         userName: '',
         objectHabit: '',
@@ -31,7 +36,7 @@ function renderApp({ path }) {
     }));
   });
 
-  return(
+  return (
     render((
       <MemoryRouter initialEntries={[path]}>
         <App />
@@ -59,9 +64,17 @@ describe('App', () => {
 
   context('with path /habitcreate', () => {
     it('renders habit creating page', () => {
-      const { getByPlaceholderText } = renderApp({ path: '/habitcreate'})
+      const { getByPlaceholderText } = renderApp({ path: '/habitcreate' })
 
       expect(getByPlaceholderText(/목표 습관/)).not.toBeNull();
+    });
+  });
+
+  context('with path /habitmatrix', () => {
+    it('renders habit matrix page', () => {
+      const { queryByText } = renderApp({ path: '/habitmatrix' })
+
+      expect(queryByText(/님이 갖게 될 습관은/)).not.toBeNull();
     });
   });
 

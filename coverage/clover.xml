@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1606036000754" clover="3.2.0">
-  <project timestamp="1606036000754" name="All files">
-    <metrics statements="24" coveredstatements="24" conditionals="3" coveredconditionals="3" methods="18" coveredmethods="18" elements="45" coveredelements="45" complexity="0" loc="24" ncloc="24" packages="1" files="9" classes="9"/>
+<coverage generated="1606042524920" clover="3.2.0">
+  <project timestamp="1606042524920" name="All files">
+    <metrics statements="28" coveredstatements="28" conditionals="3" coveredconditionals="3" methods="21" coveredmethods="21" elements="52" coveredelements="52" complexity="0" loc="28" ncloc="28" packages="1" files="11" classes="11"/>
     <file name="App.jsx" path="/Users/thkim/work/week9/flexible/src/App.jsx">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="16" count="5" type="stmt"/>
+      <line num="17" count="6" type="stmt"/>
     </file>
     <file name="GreetPage.jsx" path="/Users/thkim/work/week9/flexible/src/GreetPage.jsx">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -20,10 +20,20 @@
     </file>
     <file name="HabitForm.jsx" path="/Users/thkim/work/week9/flexible/src/HabitForm.jsx">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <line num="7" count="3" type="stmt"/>
+      <line num="17" count="2" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="21" count="3" type="stmt"/>
+    </file>
+    <file name="HabitMatrix.jsx" path="/Users/thkim/work/week9/flexible/src/HabitMatrix.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="4" count="3" type="stmt"/>
-      <line num="15" count="2" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
-      <line num="19" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+    </file>
+    <file name="HabitMatrixContainer.jsx" path="/Users/thkim/work/week9/flexible/src/HabitMatrixContainer.jsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="8" count="2" type="stmt"/>
+      <line num="12" count="2" type="stmt"/>
     </file>
     <file name="HomePage.jsx" path="/Users/thkim/work/week9/flexible/src/HomePage.jsx">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
