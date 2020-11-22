@@ -1,14 +1,36 @@
 import React from 'react';
 
+import context from 'jest-plugin-context';
+
 import {
   MemoryRouter,
 } from 'react-router-dom';
 
-import { render } from '@testing-library/react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { getByPlaceholderText, render } from '@testing-library/react';
 
 import App from './App';
 
+jest.mock('react-redux');
+
 function renderApp({ path }) {
+  const dispatch = jest.fn();
+
+  beforeEach(() => {
+    dispatch.mockClear();
+
+    useDispatch.mockImplementation(() => dispatch);
+
+    useSelector.mockImplementation((selector) => selector({
+      habitInfo: [],
+      habit: {
+        userName: '',
+        objectHabit: '',
+      },
+    }));
+  });
+
   return(
     render((
       <MemoryRouter initialEntries={[path]}>
@@ -27,27 +49,19 @@ describe('App', () => {
     });
   })
 
-  context('with path /guide', () => {
-    it('renders guidepage', () => {
-      const { getByText } = renderApp({ path: '/guide' })
+  context('with path /greet', () => {
+    it('renders greetpage', () => {
+      const { getByText } = renderApp({ path: '/greet' })
 
       expect(getByText(/환영합니다/)).not.toBeNull();
     });
   });
 
-  context('with path /guide/inputname', () => {
-    it('renders input name page', () => {
-      const { getByText } = renderApp({ path: '/guide/inputname'})
+  context('with path /habitcreate', () => {
+    it('renders habit creating page', () => {
+      const { getByPlaceholderText } = renderApp({ path: '/habitcreate'})
 
-      expect(getByText(/이름을 입력해주세요/)).not.toBeNull();
-    });
-  });
-
-  context('with path /guide/inputhabit', () => {
-    it('renders input habit page', () => {
-      const { getByText } = renderApp({ path: '/guide/inputhabit'})
-
-      expect(getByText(/무엇을 습관으로 만들고 싶나요?/)).not.toBeNull();
+      expect(getByPlaceholderText(/목표 습관/)).not.toBeNull();
     });
   });
 

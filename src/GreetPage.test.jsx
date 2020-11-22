@@ -4,13 +4,13 @@ import { render } from '@testing-library/react';
 
 import { MemoryRouter } from 'react-router-dom';
 
-import GuidePage from './GuidePage';
+import GreetPage from './GreetPage';
 
-test('GuidePage', () => {
+test('GreetPage', () => {
 
   const { getByText } = render((
     <MemoryRouter>
-      <GuidePage />
+      <GreetPage />
     </MemoryRouter>
   ));
 

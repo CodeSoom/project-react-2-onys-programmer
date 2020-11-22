@@ -1,16 +1,14 @@
 import React from 'react';
 
 import {
-  BrowserRouter,
   Route,
   Switch,
 } from 'react-router-dom';
 
 import HomePage from './HomePage';
-import GuidePage from './GuidePage';
+import GreetPage from './GreetPage';
+import HabitCreateContainer from './HabitCreateContainer';
 import NotFoundPage from './NotFoundPage';
-import InputNamePage from './InputNamePage';
-import InputHabitPage from './InputHabitPage';
 import VerticalFlexibility from './VerticalFlexibility';
 
 export default function App() {
@@ -19,9 +17,8 @@ export default function App() {
     <div>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/guide" component={GuidePage} />
-        <Route exact path="/guide/inputname" component={InputNamePage} />
-        <Route path="/guide/inputhabit" component={InputHabitPage} />
+        <Route exact path="/greet" component={GreetPage} />
+        <Route exact path="/habitcreate" component={HabitCreateContainer} />
         <Route path="/guide/verticalflexibility" component={VerticalFlexibility} />
         <Route component={NotFoundPage} />
       </Switch>
