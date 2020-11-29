@@ -8,7 +8,7 @@
     "test:unit": "jest",
     "test": "jest",
     "deploy": "npm run build && gh-pages -d build",
-    "build": "react-scripts build"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
