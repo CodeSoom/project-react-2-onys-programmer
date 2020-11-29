@@ -19,9 +19,9 @@ export default function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/greet" component={GreetPage} />
-        <Route exact path="/habitcreate" component={HabitCreateContainer} />
-        <Route exact path="/habitmatrix" component={HabitMatrixContainer} />
-        <Route path="/guide/verticalflexibility" component={VerticalFlexibility} />
+        <Route exact path="/habit-create" component={HabitCreateContainer} />
+        <Route exact path="/habit-matrix" component={HabitMatrixContainer} />
+        <Route path="/guide/vertical-flexibility" component={VerticalFlexibility} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

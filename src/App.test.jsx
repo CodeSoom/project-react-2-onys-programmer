@@ -62,25 +62,25 @@ describe('App', () => {
     });
   });
 
-  context('with path /habitcreate', () => {
+  context('with path /habit-create', () => {
     it('renders habit creating page', () => {
-      const { getByPlaceholderText } = renderApp({ path: '/habitcreate' })
+      const { getByPlaceholderText } = renderApp({ path: '/habit-create' })
 
       expect(getByPlaceholderText(/목표 습관/)).not.toBeNull();
     });
   });
 
-  context('with path /habitmatrix', () => {
+  context('with path /habit-matrix', () => {
     it('renders habit matrix page', () => {
-      const { queryByText } = renderApp({ path: '/habitmatrix' })
+      const { queryByText } = renderApp({ path: '/habit-matrix' })
 
       expect(queryByText(/님이 갖게 될 습관은/)).not.toBeNull();
     });
   });
 
-  context('with path /guide/verticalflexibility', () => {
+  context('with path /guide/vertical-flexibility', () => {
     it('renders verticalflexibility page', () => {
-      const { getByText } = renderApp({ path: '/guide/verticalflexibility' })
+      const { getByText } = renderApp({ path: '/guide/vertical-flexibility' })
 
       expect(getByText(/수직적 유연성 확보/)).not.toBeNull();
     });
@@ -88,7 +88,7 @@ describe('App', () => {
 
   context('with a path that is not exist', () => {
     it('renders not foundpage', () => {
-      const { getByText } = renderApp({ path: '/anyPathThatIsNotExist' })
+      const { getByText } = renderApp({ path: '/any-path-that-is-not-exist' })
 
       expect(getByText(/not found/)).not.toBeNull();
     });
