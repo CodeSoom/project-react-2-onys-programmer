@@ -7,7 +7,7 @@
     "start": "webpack-dev-server",
     "test:unit": "jest",
     "test": "jest",
-    "deploy": "npm run build && gh-pages -d build",
+    "deploy": "gh-pages -d dist --remote upstream",
     "build": "webpack"
   },
   "repository": {
