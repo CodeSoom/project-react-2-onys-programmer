@@ -2,12 +2,12 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
-import HorizontalFlexibility from './HorizontalFlexibility';
+import CategoryForm from './CategoryForm';
 
 
-test('HorizontalFlexibility', () => {
+test('CategoryForm', () => {
   const { queryByText } = render((
-  <HorizontalFlexibility />
+  <CategoryForm />
   ));
 
   expect(queryByText(/수평적 유연성/)).not.toBeNull();

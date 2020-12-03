@@ -2,7 +2,7 @@ import React from 'react';
 
 import ExerciseExample from './ExerciseExample';
 
-export default function HorizontalFlexibility() {
+export default function CategoryForm() {
   return (
     <>
       <div>
