@@ -1,5 +1,5 @@
 import React from 'react';
-import HorizontalFlexibility from './HorizontalFlexibility';
+import CategoryForm from './CategoryForm';
 
 export default function HabitMatrix({ habitInfo }) {
   const { userName, objectHabit } = habitInfo[0];
@@ -9,7 +9,7 @@ export default function HabitMatrix({ habitInfo }) {
     <div>
       <h1>{userName}님이 갖게 될 습관은 {objectHabit}입니다!</h1>
     </div>
-    <HorizontalFlexibility />
+    <CategoryForm />
     </>
   )
 }
