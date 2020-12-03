@@ -5,6 +5,7 @@ import reducer from './reducer';
 import {
   changeHabitField,
   setHabit,
+  setCategories,
 } from './actions'
 
 describe('reducer', () => {
@@ -45,6 +46,22 @@ describe('reducer', () => {
     });
   });
 
+  describe('setCategories', () => {
+    it('sets categories', () => {
+      const initialState = {
+        categories: [],
+      };
+
+      const categories = [
+        { id: 1, name: '헬스장 가기' },
+      ];
+
+      const state = reducer(initialState, setCategories(categories));
+
+      expect(state.categories).toHaveLength(1);
+    });
+  });
+
   context('when previous state is undefined', () => {
     const initialState = {
       habitInfo: [],
@@ -52,6 +69,7 @@ describe('reducer', () => {
         userName: '',
         objectHabit: '',
       },
+      categories: [],
     };
 
     it('returns initialState', () => {

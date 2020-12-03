@@ -13,3 +13,10 @@ export function setHabit() {
     type: 'setHabit',
   };
 }
+
+export function setCategories(categories) {
+  return {
+    type: 'setCategories',
+    payload: { categories },
+  };
+}

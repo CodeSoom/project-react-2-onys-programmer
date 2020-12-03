@@ -2,7 +2,7 @@ import React from 'react';
 
 import ExerciseExample from './ExerciseExample';
 
-export default function CategoryForm() {
+export default function CategoryForm({ onClick }) {
   return (
     <>
       <div>
@@ -27,7 +27,9 @@ export default function CategoryForm() {
           type="text"
           name="category3"
         />
-        <button>
+        <button 
+        type="button"
+        onClick={onClick}>
           입력
         </button>
       </div>
