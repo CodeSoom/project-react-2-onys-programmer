@@ -30,7 +30,17 @@ const reducers = {
     };
   },
 
-  setCategories(state, { payload: { categories } }) {
+  changeCategoryField(state, { payload: { name, value }}) {
+    return {
+      ...state,
+      categories: {
+        ...state.categories,
+        [name]: value,
+      }
+    };
+  },
+
+  addCategories(state, { payload: { categories } }) {
     return {
       ...state,
       categories,

@@ -5,20 +5,24 @@ import CategoryForm from './CategoryForm';
 import { useDispatch } from 'react-redux';
 
 import {
-  setCategories,
+  changeCategoryField,
+  addCategories,
 } from './actions';
 
 export default function CategoryCreateContainer() {
   const dispatch = useDispatch();
 
-  function handleCLick() {
-    dispatch(setCategories);
+  function handleChange({ name, value }) {
+    dispatch(changeCategoryField({ name, value }));
+  }
+
+  function handleClick() {
+    dispatch(addCategories());
   }
 
   return(
-    <>
     <CategoryForm 
-    onClick={handleCLick}/>
-    </>
+    onChange={handleChange}
+    onClick={handleClick}/>
   );
 }

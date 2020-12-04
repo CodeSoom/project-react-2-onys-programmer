@@ -46,19 +46,40 @@ describe('reducer', () => {
     });
   });
 
-  describe('setCategories', () => {
-    it('sets categories', () => {
+  describe('changeCategoryField', () => {
+    it('changes each category form', () => {
+      const initialState = {
+        categories: { 
+          category1: '',
+          category2: '',
+          category3: '',
+        }
+      };
+
+      const state = reducer(initialState, changeHabitField({
+        name: 'category1',
+        value: '산책하기',
+      }));
+
+      expect(state.categories.category1).toBe('산책하기');
+    });
+  });
+
+  describe('addCategories', () => {
+    it('adds categories', () => {
       const initialState = {
         categories: [],
       };
 
       const categories = [
-        { id: 1, name: '헬스장 가기' },
+        { categoryId: 1, categoryName: '산책하기' },
+        { categoryId: 2, categoryName: '헬스장 가기' },
+        { categoryId: 3, categoryName: '팔굽혀펴기' },
       ];
 
-      const state = reducer(initialState, setCategories(categories));
+      const state = reducer(initialState, addCategories(categories));
 
-      expect(state.categories).toHaveLength(1);
+      expect(state.categories).toHaveLength(3);
     });
   });
 

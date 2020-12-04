@@ -1,4 +1,4 @@
-export function changeHabitField({name, value}) {
+export function changeHabitField({ name, value }) {
   return {
     type: 'changeHabitField',
     payload: {
@@ -14,9 +14,18 @@ export function setHabit() {
   };
 }
 
-export function setCategories(categories) {
+export function changeCategoryField({ name, value }) {
   return {
-    type: 'setCategories',
-    payload: { categories },
+    type: 'changeCategoryField',
+    payload: { 
+      name, 
+      value,
+     },
+  };
+}
+
+export function addCategories() {
+  return {
+    type: 'addCategories',
   };
 }
