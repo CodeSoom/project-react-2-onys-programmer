@@ -32,7 +32,7 @@ export default function HabitForm({ habit, onChange, onClick }) {
         type="button"
         onClick={onClick}
       >
-        <Link to="habit-matrix">
+        <Link to="horizontal-flexibility">
           입력
         </Link> 
     </button>
