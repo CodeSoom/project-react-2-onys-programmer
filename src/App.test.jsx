@@ -8,6 +8,9 @@ import {
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import habit from '../fixtures/habit';
+import categories from '../fixtures/categories';
+
 import { render } from '@testing-library/react';
 
 import App from './App';
@@ -24,27 +27,13 @@ function renderApp({ path }) {
 
     useSelector.mockImplementation((selector) => selector({
       habitInfo: [
-        {
-          userName: '',
-          objectHabit: '',
-        },
+        habit,
       ],
-      habit: {
-        userName: '',
-        objectHabit: '',
-      },
+      habit,
       categoryInfo: [
-        {
-          category1: '',
-          category2: '',
-          category3: '',
-        },
+        categories,
       ],
-      categories: {
-        category1: '',
-        category2: '',
-        category3: '',
-      },
+      categories,
     }));
   });
 
