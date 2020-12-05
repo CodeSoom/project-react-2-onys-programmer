@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ExerciseExample from './ExerciseExample';
+import GlobalExample from './GlobalExample';
 
 import { Link } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ export default function CategoryForm({ categories, onChange, onClick }) {
         <h3>세 가지 카테고리를 정하세요</h3>
         <br></br>
         <p>하나의 습관에도 여러 카테고리가 있을 수 있습니다.</p>
-        <ExerciseExample />
+        <GlobalExample />
       </div>
       <div>
         <input
