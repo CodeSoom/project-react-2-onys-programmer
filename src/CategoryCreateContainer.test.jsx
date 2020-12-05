@@ -21,7 +21,7 @@ describe('CategoryCreateContainer', () => {
         category1: '산책하',
         category2: '헬스장 가',
         category3: '팔굽혀',
-      }
+      },
     }))
 
     useDispatch.mockImplementation(() => dispatch);

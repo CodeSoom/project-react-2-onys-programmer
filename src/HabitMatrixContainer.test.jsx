@@ -20,7 +20,7 @@ test('HabitMatrixContainer', () => {
       habit,
     ],
     categories,
-  }))
+  }));
 
   const { queryByText } = render((
     <MemoryRouter>

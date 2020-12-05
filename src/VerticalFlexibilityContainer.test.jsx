@@ -1,21 +1,26 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
+
 import categories from '../fixtures/categories';
 
 import { render } from '@testing-library/react';
 
-import VerticalFlexibility from './VerticalFlexibility';
+import VerticalFlexibilityContainer from './VerticalFlexibilityContainer';
 
-test('VerticalFlexibility', () => {
+jest.mock('react-redux');
 
-  const categoryInfo = [
+test('VerticalFlexibilityContainer', () => {
+
+  useSelector.mockImplementation((selector) => selector({
+    categoryInfo:[
+      categories,
+    ],
     categories,
-  ];
+  }));
 
   const { queryByText } = render((
-      <VerticalFlexibility
-      categoryInfo={categoryInfo} 
-      />
+      <VerticalFlexibilityContainer />
   ));
 
   expect(queryByText(/수직적 유연성/)).not.toBeNull();
