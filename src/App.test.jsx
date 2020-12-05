@@ -87,11 +87,11 @@ describe('App', () => {
     });
   });
 
-  context('with path /guide/vertical-flexibility', () => {
+  context('with path /vertical-flexibility', () => {
     it('renders verticalflexibility page', () => {
-      const { getByText } = renderApp({ path: '/guide/vertical-flexibility' })
+      const { getByText } = renderApp({ path: '/vertical-flexibility' })
 
-      expect(getByText(/수직적 유연성 확보/)).not.toBeNull();
+      expect(getByText(/수직적 유연성/)).not.toBeNull();
     });
   });
 

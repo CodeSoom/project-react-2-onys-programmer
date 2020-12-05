@@ -23,7 +23,7 @@ export default function App() {
         <Route exact path="/habit-create" component={HabitCreateContainer} />
         <Route exact path="/habit-matrix" component={HabitMatrixContainer} />
         <Route exact path="/horizontal-flexibility" component={HorizontalFlexibility} />
-        <Route exact path="/guide/vertical-flexibility" component={VerticalFlexibility} />
+        <Route exact path="/vertical-flexibility" component={VerticalFlexibility} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

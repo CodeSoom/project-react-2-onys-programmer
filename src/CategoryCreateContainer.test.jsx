@@ -7,6 +7,7 @@ import categories from '../fixtures/categories';
 import { fireEvent, render } from '@testing-library/react';
 
 import CategoryCreateContainer from './CategoryCreateContainer';
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('react-redux');
 
@@ -15,7 +16,7 @@ describe('CategoryCreateContainer', () => {
     const dispatch = jest.fn();
 
     useSelector.mockImplementation((selector) => selector({
-      categories: 
+      categories:
       {
         category1: '산책하',
         category2: '헬스장 가',
@@ -26,7 +27,9 @@ describe('CategoryCreateContainer', () => {
     useDispatch.mockImplementation(() => dispatch);
 
     const { queryByPlaceholderText } = render((
-      <CategoryCreateContainer />
+      <MemoryRouter>
+        <CategoryCreateContainer />
+      </MemoryRouter>
     ))
 
     expect(queryByPlaceholderText('종류 1')).not.toBeNull();
@@ -55,7 +58,9 @@ describe('CategoryCreateContainer', () => {
     useDispatch.mockImplementation(() => dispatch);
 
     const { queryByText } = render((
-      <CategoryCreateContainer />
+      <MemoryRouter>
+        <CategoryCreateContainer />
+      </MemoryRouter>
     ))
 
     expect(queryByText('입력')).not.toBeNull();
