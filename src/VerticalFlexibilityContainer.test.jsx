@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
+import habit from '../fixtures/habit';
 import categories from '../fixtures/categories';
 
 import { render } from '@testing-library/react';
@@ -13,6 +14,10 @@ jest.mock('react-redux');
 test('VerticalFlexibilityContainer', () => {
 
   useSelector.mockImplementation((selector) => selector({
+    habitInfo: [
+      habit,
+    ],
+    habit,
     categoryInfo:[
       categories,
     ],
