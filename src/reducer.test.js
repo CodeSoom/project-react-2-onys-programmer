@@ -5,7 +5,8 @@ import reducer from './reducer';
 import {
   changeHabitField,
   setHabit,
-  setCategories,
+  changeCategoryField,
+  addCategories,
 } from './actions'
 
 describe('reducer', () => {
@@ -46,19 +47,39 @@ describe('reducer', () => {
     });
   });
 
-  describe('setCategories', () => {
-    it('sets categories', () => {
+  describe('changeCategoryField', () => {
+    it('changes each category form', () => {
       const initialState = {
-        categories: [],
+        categories: { 
+          category1: '',
+          category2: '',
+          category3: '',
+        }
       };
 
-      const categories = [
-        { id: 1, name: '헬스장 가기' },
-      ];
+      const state = reducer(initialState, changeCategoryField({
+        name: 'category1',
+        value: '산책하기',
+      }));
 
-      const state = reducer(initialState, setCategories(categories));
+      expect(state.categories.category1).toBe('산책하기');
+    });
+  });
 
-      expect(state.categories).toHaveLength(1);
+  describe('addCategories', () => {
+    it('adds categories', () => {
+      const initialState = {
+        categoryInfo: [],
+        categories: {
+          category1: '산책하기',
+          category2: '헬스장 가기',
+          category3: '팔굽혀펴기',
+        },
+      };
+
+      const state = reducer(initialState, addCategories());
+
+      expect(state.categoryInfo).toHaveLength(1);
     });
   });
 
@@ -69,7 +90,12 @@ describe('reducer', () => {
         userName: '',
         objectHabit: '',
       },
-      categories: [],
+      categoryInfo: [],
+      categories: {
+        category1: '',
+        category2: '',
+        category3: '',
+      }
     };
 
     it('returns initialState', () => {

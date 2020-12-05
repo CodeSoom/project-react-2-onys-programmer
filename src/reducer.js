@@ -4,7 +4,12 @@ const initialState = {
     userName: '',
     objectHabit: '',
   },
-  categories: [],
+  categoryInfo: [],
+  categories: {
+    category1: '',
+    category2: '',
+    category3: '',
+  },
 };
 
 const reducers = {
@@ -30,10 +35,26 @@ const reducers = {
     };
   },
 
-  setCategories(state, { payload: { categories } }) {
+  changeCategoryField(state, { payload: { name, value }}) {
     return {
       ...state,
-      categories,
+      categories: {
+        ...state.categories,
+        [name]: value,
+      }
+    };
+  },
+
+  addCategories(state) {
+    const { categoryInfo, categories } = state;
+    return {
+      ...state,
+      categoryInfo: [...categoryInfo, categories],
+      categories: {
+        category1: '',
+        category2: '',
+        category3: '',
+      }
     };
   }
 };

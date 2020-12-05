@@ -17,6 +17,12 @@ test('HabitMatrixContainer', () => {
         userName: '김태호', objectHabit: '운동하기',
       },
     ],
+    categories: 
+      {
+        category1: '산책하',
+        category2: '헬스장 가',
+        category3: '팔굽혀',
+      },
   }))
 
   const { queryByText } = render((

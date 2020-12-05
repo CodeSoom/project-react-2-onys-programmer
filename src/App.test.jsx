@@ -27,11 +27,23 @@ function renderApp({ path }) {
         {
           userName: '',
           objectHabit: '',
-        }
+        },
       ],
       habit: {
         userName: '',
         objectHabit: '',
+      },
+      categoryInfo: [
+        {
+          category1: '',
+          category2: '',
+          category3: '',
+        },
+      ],
+      categories: {
+        category1: '',
+        category2: '',
+        category3: '',
       },
     }));
   });
