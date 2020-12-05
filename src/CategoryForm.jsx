@@ -2,7 +2,7 @@ import React from 'react';
 
 import ExerciseExample from './ExerciseExample';
 
-export default function CategoryForm({ onChange, onClick }) {
+export default function CategoryForm({ categories, onChange, onClick }) {
   function handleChange(event) {
     const { target: { name, value } } = event;
     onChange({ name, value });
@@ -22,6 +22,7 @@ export default function CategoryForm({ onChange, onClick }) {
           type="text"
           name="category1"
           placeholder="종류 1"
+          value={categories.category1}
           onChange={handleChange}
         />
         <a>---</a>
@@ -29,6 +30,7 @@ export default function CategoryForm({ onChange, onClick }) {
           type="text"
           name="category2"
           placeholder="종류 2"
+          value={categories.category2}
           onChange={handleChange}
         />
         <a>---</a>
@@ -36,6 +38,7 @@ export default function CategoryForm({ onChange, onClick }) {
           type="text"
           name="category3"
           placeholder="종류 3"
+          value={categories.category3}
           onChange={handleChange}
         />
         <button 

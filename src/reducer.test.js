@@ -5,7 +5,8 @@ import reducer from './reducer';
 import {
   changeHabitField,
   setHabit,
-  setCategories,
+  changeCategoryField,
+  addCategories,
 } from './actions'
 
 describe('reducer', () => {
@@ -56,7 +57,7 @@ describe('reducer', () => {
         }
       };
 
-      const state = reducer(initialState, changeHabitField({
+      const state = reducer(initialState, changeCategoryField({
         name: 'category1',
         value: '산책하기',
       }));
@@ -68,18 +69,17 @@ describe('reducer', () => {
   describe('addCategories', () => {
     it('adds categories', () => {
       const initialState = {
-        categories: [],
+        categoryInfo: [],
+        categories: {
+          category1: '산책하기',
+          category2: '헬스장 가기',
+          category3: '팔굽혀펴기',
+        },
       };
 
-      const categories = [
-        { categoryId: 1, categoryName: '산책하기' },
-        { categoryId: 2, categoryName: '헬스장 가기' },
-        { categoryId: 3, categoryName: '팔굽혀펴기' },
-      ];
+      const state = reducer(initialState, addCategories());
 
-      const state = reducer(initialState, addCategories(categories));
-
-      expect(state.categories).toHaveLength(3);
+      expect(state.categoryInfo).toHaveLength(1);
     });
   });
 
@@ -90,7 +90,12 @@ describe('reducer', () => {
         userName: '',
         objectHabit: '',
       },
-      categories: [],
+      categoryInfo: [],
+      categories: {
+        category1: '',
+        category2: '',
+        category3: '',
+      }
     };
 
     it('returns initialState', () => {

@@ -6,11 +6,18 @@ import CategoryForm from './CategoryForm';
 
 
 test('CategoryForm', () => {
+  const categories = {
+    category1: '산책하',
+    category2: '헬스장 가',
+    category3: '팔굽혀펴',
+  };
+
   const handleChange = jest.fn();
   const handleClick = jest.fn();
 
   const { queryByText, queryByPlaceholderText } = render((
   <CategoryForm 
+  categories={categories}
   onChange={handleChange}
   onClick={handleClick}
   />

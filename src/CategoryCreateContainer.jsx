@@ -2,7 +2,7 @@ import React from 'react';
 
 import CategoryForm from './CategoryForm';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import {
   changeCategoryField,
@@ -11,6 +11,10 @@ import {
 
 export default function CategoryCreateContainer() {
   const dispatch = useDispatch();
+
+  const { categories } = useSelector((state) => ({
+    categories: state.categories,
+  }))
 
   function handleChange({ name, value }) {
     dispatch(changeCategoryField({ name, value }));
@@ -22,6 +26,7 @@ export default function CategoryCreateContainer() {
 
   return(
     <CategoryForm 
+    categories={categories}
     onChange={handleChange}
     onClick={handleClick}/>
   );

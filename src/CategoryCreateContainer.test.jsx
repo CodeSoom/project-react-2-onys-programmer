@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { fireEvent, render } from '@testing-library/react';
 
@@ -11,14 +11,20 @@ jest.mock('react-redux');
 describe('CategoryCreateContainer', () => {
   it('changes category form', () => {
     const dispatch = jest.fn();
-    const handleChange = jest.fn();
+
+    useSelector.mockImplementation((selector) => selector({
+      categories: 
+      {
+        category1: '산책하',
+        category2: '헬스장 가',
+        category3: '팔굽혀',
+      }
+    }))
 
     useDispatch.mockImplementation(() => dispatch);
 
     const { queryByPlaceholderText } = render((
-      <CategoryCreateContainer
-        onChange={handleChange}
-      />
+      <CategoryCreateContainer />
     ))
 
     expect(queryByPlaceholderText('종류 1')).not.toBeNull();
@@ -40,14 +46,19 @@ describe('CategoryCreateContainer', () => {
 
   it('adds categories to state', () => {
     const dispatch = jest.fn();
-    const handleClick = jest.fn();
 
+    useSelector.mockImplementation((selector) => selector({
+      categories: 
+      {
+        category1: '산책하',
+        category2: '헬스장 가',
+        category3: '팔굽혀',
+      },
+    }))
     useDispatch.mockImplementation(() => dispatch);
 
     const { queryByText } = render((
-      <CategoryCreateContainer
-        onClick={handleClick}
-      />
+      <CategoryCreateContainer />
     ))
 
     expect(queryByText('입력')).not.toBeNull();

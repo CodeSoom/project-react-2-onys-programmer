@@ -4,7 +4,12 @@ const initialState = {
     userName: '',
     objectHabit: '',
   },
-  categories: [],
+  categoryInfo: [],
+  categories: {
+    category1: '',
+    category2: '',
+    category3: '',
+  },
 };
 
 const reducers = {
@@ -40,10 +45,16 @@ const reducers = {
     };
   },
 
-  addCategories(state, { payload: { categories } }) {
+  addCategories(state) {
+    const { categoryInfo, categories } = state;
     return {
       ...state,
-      categories,
+      categoryInfo: [...categoryInfo, categories],
+      categories: {
+        category1: '',
+        category2: '',
+        category3: '',
+      }
     };
   }
 };
