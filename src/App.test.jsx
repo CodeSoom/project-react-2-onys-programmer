@@ -79,6 +79,14 @@ describe('App', () => {
     });
   });
 
+  context('with path /horizontal-flexibility', () => {
+    it('renders HorizontalFlexibilityContainer', () => {
+      const { getByText } = renderApp({ path: '/horizontal-flexibility' })
+
+      expect(getByText(/수평적 유연성/)).not.toBeNull();
+    });
+  });
+
   context('with path /guide/vertical-flexibility', () => {
     it('renders verticalflexibility page', () => {
       const { getByText } = renderApp({ path: '/guide/vertical-flexibility' })
