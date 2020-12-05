@@ -2,6 +2,8 @@ import React from 'react';
 
 import ExerciseExample from './ExerciseExample';
 
+import { Link } from 'react-router-dom';
+
 export default function CategoryForm({ categories, onChange, onClick }) {
   function handleChange(event) {
     const { target: { name, value } } = event;
@@ -41,10 +43,13 @@ export default function CategoryForm({ categories, onChange, onClick }) {
           value={categories.category3}
           onChange={handleChange}
         />
-        <button 
-        type="button"
-        onClick={onClick}>
-          입력
+        <button
+          type="button"
+          onClick={onClick}
+        >
+          <Link to="vertical-flexibility">
+            입력
+          </Link>
         </button>
       </div>
     </>

@@ -3,6 +3,7 @@ import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
 
 import CategoryForm from './CategoryForm';
+import { MemoryRouter } from 'react-router-dom';
 
 
 test('CategoryForm', () => {
@@ -16,11 +17,13 @@ test('CategoryForm', () => {
   const handleClick = jest.fn();
 
   const { queryByText, queryByPlaceholderText } = render((
-  <CategoryForm 
-  categories={categories}
-  onChange={handleChange}
-  onClick={handleClick}
-  />
+    <MemoryRouter>
+      <CategoryForm
+        categories={categories}
+        onChange={handleChange}
+        onClick={handleClick}
+      />
+    </MemoryRouter>
   ));
 
   expect(queryByText(/수평적 유연성/)).not.toBeNull();
@@ -28,14 +31,14 @@ test('CategoryForm', () => {
   expect(queryByPlaceholderText('종류 2')).not.toBeNull();
   expect(queryByPlaceholderText('종류 3')).not.toBeNull();
 
-    fireEvent.change(queryByPlaceholderText('종류 1'), {
-      target: { value: '산책하기' },
-    });
+  fireEvent.change(queryByPlaceholderText('종류 1'), {
+    target: { value: '산책하기' },
+  });
 
-    expect(handleChange).toBeCalledWith({
-      name: 'category1',
-      value: '산책하기',
-    });
+  expect(handleChange).toBeCalledWith({
+    name: 'category1',
+    value: '산책하기',
+  });
 
   expect(queryByText(/입력/)).not.toBeNull();
 
