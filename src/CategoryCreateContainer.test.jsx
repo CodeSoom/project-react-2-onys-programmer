@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 
+import categories from '../fixtures/categories';
+
 import { fireEvent, render } from '@testing-library/react';
 
 import CategoryCreateContainer from './CategoryCreateContainer';
@@ -48,12 +50,7 @@ describe('CategoryCreateContainer', () => {
     const dispatch = jest.fn();
 
     useSelector.mockImplementation((selector) => selector({
-      categories: 
-      {
-        category1: '산책하',
-        category2: '헬스장 가',
-        category3: '팔굽혀',
-      },
+      categories,
     }))
     useDispatch.mockImplementation(() => dispatch);
 

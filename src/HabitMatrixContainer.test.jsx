@@ -4,7 +4,11 @@ import { render } from '@testing-library/react';
 
 import { useSelector } from 'react-redux';
 
+import habit from '../fixtures/habit';
+import categories from '../fixtures/categories';
+
 import HabitMatrixContainer from './HabitMatrixContainer';
+
 import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('react-redux');
@@ -13,16 +17,9 @@ test('HabitMatrixContainer', () => {
 
   useSelector.mockImplementation((selector) => selector({
     habitInfo: [
-      {
-        userName: '김태호', objectHabit: '운동하기',
-      },
+      habit,
     ],
-    categories: 
-      {
-        category1: '산책하',
-        category2: '헬스장 가',
-        category3: '팔굽혀',
-      },
+    categories,
   }))
 
   const { queryByText } = render((
@@ -33,5 +30,4 @@ test('HabitMatrixContainer', () => {
 
   expect(queryByText(/김태호/)).not.toBeNull();
   expect(queryByText(/님이 갖게 될 습관은/)).not.toBeNull();
-  expect(queryByText(/김태호/)).not.toBeNull();
 });

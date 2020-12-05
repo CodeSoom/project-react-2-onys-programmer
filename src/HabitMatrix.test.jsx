@@ -2,14 +2,14 @@ import React from 'react';
 
 import { render } from '@testing-library/react';
 
+import habit from '../fixtures/habit';
+
 import HabitMatrix from './HabitMatrix';
 
 test('HabitMatrix', () => {
 
   const habitInfo = [
-    {
-      userName: '김태호', objectHabit: '운동하기',
-    },
+    habit,
   ];
 
   const { queryByText } = render((
