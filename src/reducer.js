@@ -3,7 +3,8 @@ const initialState = {
   habit: {
     userName: '',
     objectHabit: '',
-  }
+  },
+  categories: [],
 };
 
 const reducers = {
@@ -26,6 +27,13 @@ const reducers = {
         userName: '',
         objectHabit: '',
       },
+    };
+  },
+
+  setCategories(state, { payload: { categories } }) {
+    return {
+      ...state,
+      categories,
     };
   }
 };
