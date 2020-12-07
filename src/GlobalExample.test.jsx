@@ -10,6 +10,7 @@ test('GlobalExample', () => {
   <GlobalExample />
   ));
 
-  expect(queryByText(/예를 들어/)).not.toBeNull();
-  expect(queryAllByText(/운동/)).not.toBeNull();
+  expect(queryAllByText(/예/)).not.toBeNull();
+  expect(queryByText(/독서/)).not.toBeNull();
+  expect(queryByText(/운동/)).not.toBeNull();
 });
