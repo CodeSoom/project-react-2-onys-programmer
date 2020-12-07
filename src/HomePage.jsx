@@ -2,12 +2,48 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import styled from '@emotion/styled';
+
+import FlexibleHeaderImage from './assets/images';
+
+const Header = styled.header({
+  margin: '0 auto',
+  maxWidth: '40%',
+  fontSize: '6em',
+})
+
+const Container = styled.body({
+  margin: '0 auto',
+  maxWidth: '30%',
+})
+
+const HeaderImage = styled.image({
+  margin: '0 auto',
+  maxWidth: '50%',
+})
+
+const Button = styled.div({
+  margin: '0 auto',
+  maxWidth: '15%',
+})
+
 export default function HomePage() {
   return (
     <>
-    <h1>Flexible</h1>
-    <h3>Get any habit successfully!</h3>
-    <button><Link to="/greet">Get it started!</Link></button>
+      <Header>
+        Flexible
+      </Header>
+      <Container>
+        <h3>Get any habit successfully!</h3>
+      </Container>
+      <HeaderImage>
+        <img
+          src={FlexibleHeaderImage}
+        />
+      </HeaderImage>
+      <Button>
+        <button><Link to="/greet">Get it started!</Link></button>
+      </Button>
     </>
   );
 }
