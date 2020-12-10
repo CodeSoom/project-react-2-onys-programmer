@@ -1,5 +1,3 @@
-import FlexibleHeaderImage from './images/flexibleheader.jpg';
+import { flexible_header } from './images/flexible_header.png';
 
-export {
-  FlexibleHeaderImage,
-};
+export { flexible_header }
