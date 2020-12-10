@@ -11,4 +11,9 @@ module.exports = {
       statements: 100,
     },
   },
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif)$': './__mocks__/fileMock.js',
+    '\\.(css|less)$': './__mocks__/styleMock.js'
+  },
+
 };
