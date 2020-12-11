@@ -1,4 +1,5 @@
 const path = require('path');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.jsx'),
@@ -19,6 +20,27 @@ module.exports = {
       }
     ],
   },
+    plugins: [
+      new ImageMinimizerPlugin({
+        minimizerOptions: {
+          plugins: [
+            ['gifsicle', { interlaced: true }],
+            ['jpegtran', { progressive: true }],
+            ['optipng', { optimizationLevel: 5 }],
+            [
+              'svgo',
+              {
+                plugins: [
+                  {
+                    removeViewBox: false,
+                  },
+                ],
+              },
+            ],
+          ],
+        },
+      }),
+    ],
   resolve: {
     extensions: ['.js', '.jsx'],
   },
