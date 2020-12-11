@@ -8,23 +8,28 @@ import flexible_header from './images/flexible_header.png';
 
 const Header = styled.header({
   margin: '0 auto',
-  maxWidth: '40%',
+  width: '70%',
   fontSize: '6em',
+  textAlign: 'center',
 })
 
 const Container = styled.body({
   margin: '0 auto',
-  maxWidth: '30%',
+  width: '60%',
+  textAlign: 'center',
 })
 
-const HeaderImage = styled.image({
-  margin: '0 auto',
-  maxWidth: '50%',
+const HeaderImage = styled.body({
+  margin: '4% 0 auto',
+  height: '500',
+  width: '300',
+  textAlign: 'center',
 })
 
 const Button = styled.div({
-  margin: '0 auto',
-  maxWidth: '15%',
+  margin: '2% auto',
+  Width: '15%',
+  textAlign: 'center',
 })
 
 export default function HomePage() {
@@ -39,6 +44,7 @@ export default function HomePage() {
       <HeaderImage>
         <img
           src={flexible_header}
+          width="300"
         />
       </HeaderImage>
       <Button>
