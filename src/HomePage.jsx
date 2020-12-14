@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import flexible_header from './images/flexible_header.png';
+import flexible_header from './images/flexible_header.jpg';
 
 const Header = styled.header({
   margin: '0 auto',
