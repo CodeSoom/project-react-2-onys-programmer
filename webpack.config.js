@@ -11,7 +11,7 @@ module.exports = {
         use: 'babel-loader',
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -25,7 +25,7 @@ module.exports = {
         minimizerOptions: {
           plugins: [
             ['gifsicle', { interlaced: true }],
-            ['jpegtran', { progressive: true }],
+            ['mozjpeg', { quality: 8 }],
             ['optipng', { optimizationLevel: 5 }],
             [
               'svgo',
