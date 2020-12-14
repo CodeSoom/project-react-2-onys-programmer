@@ -14,7 +14,7 @@ import store from './store';
 ReactDOM.render(
   (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/project-react-2-onys-programmer">
         <App />
       </BrowserRouter>
     </Provider>
