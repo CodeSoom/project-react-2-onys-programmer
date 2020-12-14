@@ -1,8 +1,37 @@
 import React from 'react';
 
+import styled from '@emotion/styled';
+
 import GlobalExample from './GlobalExample';
 
 import { Link } from 'react-router-dom';
+
+const Header = styled.header({
+  margin: '2% 2% 0 2%',
+  width: '96%',
+  textAlign: 'left',
+});
+
+const Intro = styled.body({
+  margin: '0 auto',
+  width: '96%',
+  fontSize: '0.95em',
+  textAlign: 'left',
+});
+
+const Container = styled.body({
+  margin: '5% auto',
+  width: '96%',
+  fontSize: '1.6em',
+  textAlign: 'center',
+});
+
+const Inputs = styled.body({
+  margin: '0 auto',
+  height: '500',
+  width: '300',
+  textAlign: 'center',
+});
 
 export default function CategoryForm({ categories, onChange, onClick }) {
   function handleChange(event) {
@@ -12,14 +41,17 @@ export default function CategoryForm({ categories, onChange, onClick }) {
 
   return (
     <>
-      <div>
+      <Header>
         <h2>수평적 유연성 확보하기</h2>
+      </Header>
+      <Intro>
         <h3>세 가지 카테고리를 정하세요</h3>
-        <br></br>
-        <p>하나의 습관에도 여러 카테고리가 있을 수 있습니다.</p>
-        <GlobalExample />
-      </div>
-      <div>
+      </Intro>
+      <Container>
+        <p>하나의 습관에도 여러 카테고리가 있습니다.</p>
+      </Container>
+      <GlobalExample />
+      <Inputs>
         <input
           type="text"
           name="category1"
@@ -51,7 +83,7 @@ export default function CategoryForm({ categories, onChange, onClick }) {
             입력
           </Link>
         </button>
-      </div>
+      </Inputs>
     </>
   );
 } 
