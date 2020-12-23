@@ -1,13 +1,13 @@
 import React from 'react';
 
 export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
-  const { objectHabit } = habitInfo[0];
+  const { userName, objectHabit } = habitInfo[0];
   
   const { category1, category2, category3 } = categoryInfo[0];
 
   return (
     <>
-      <h1>매일 {objectHabit}</h1>
+      <h1>{userName}님이 갖게 될 습관은 매일 {objectHabit}입니다!</h1>
       <h2>수직적 유연성 확보하기!</h2>
       <h3>
         {category1}

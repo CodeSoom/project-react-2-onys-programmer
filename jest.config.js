@@ -12,8 +12,8 @@ module.exports = {
     },
   },
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif)$': '<rootdir>/__mocks__/fileMock.js',
-    '\\.(css|less)$': '<rootdir>/__mocks__/styleMock.js'
+    '\\.(jpg|jpeg|png|gif)$': '<rootDir>/__mocks__/fileMock.js',
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js'
   },
 
 };
