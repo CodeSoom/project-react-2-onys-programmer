@@ -16,7 +16,7 @@ test('VerticalFlexibility', () => {
     categories,
   ];
 
-  const { queryByText } = render((
+  const { queryByText, queryByRole } = render((
       <VerticalFlexibility
       habitInfo={habitInfo}
       categoryInfo={categoryInfo} 
@@ -28,4 +28,7 @@ test('VerticalFlexibility', () => {
   expect(queryByText(/산책하기/)).not.toBeNull();
   expect(queryByText(/헬스장 가기/)).not.toBeNull();
   expect(queryByText(/팔굽혀펴기/)).not.toBeNull();
+
+  expect(queryByText(/LV/)).not.toBeNull();
+  expect(queryByRole('experienceBar')).not.toBeNull();
 });
