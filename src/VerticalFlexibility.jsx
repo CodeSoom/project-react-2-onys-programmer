@@ -21,6 +21,12 @@ const Buttons = styled.div({
   textAlign: 'center',
 })
 
+const Button = styled.div({
+  margin: '17% auto',
+  Width: '15%',
+  textAlign: 'center',
+})
+
 export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
   const { userName, objectHabit } = habitInfo[0];
 
@@ -35,11 +41,19 @@ export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
         <h2>수직적 유연성 확보하기!</h2>
       </Intro>
       <Buttons>
-        {category1}
-        {' '}|{' '}
-        {category2}
-        {' '}|{' '}
-        {category3}
+        <Button>
+          <button>
+            {category1}
+          </button>
+          ---
+          <button>
+            {category2}
+          </button>
+          ---
+          <button>
+            {category3}
+          </button>
+        </Button>
       </Buttons>
     </>
   );
