@@ -8,7 +8,7 @@ const Header = styled.header({
   textAlign: 'left',
 })
 
-const Intro = styled.body({
+const Intro = styled.div({
   margin: '0 auto',
   width: '96%',
   fontSize: '0.95em',

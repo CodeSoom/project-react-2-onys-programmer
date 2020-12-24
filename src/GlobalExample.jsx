@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-const Examples = styled.body({
+const Examples = styled.div({
   margin: '0 auto',
   width: '96%',
   fontSize: '0.95em',
@@ -10,7 +10,7 @@ const Examples = styled.body({
   textAlign: 'center',
 });
 
-const Instruction = styled.body({
+const Instruction = styled.div({
   margin: '5% 2% 1% 2%',
   width: '96%',
   fontSize: '1.25em',

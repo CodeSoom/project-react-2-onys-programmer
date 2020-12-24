@@ -4,13 +4,13 @@ import styled from '@emotion/styled';
 
 import { Link } from 'react-router-dom';
 
-const Container = styled.body({
+const Container = styled.div({
   margin: '5% auto',
   width: '60%',
   textAlign: 'center',
 })
 
-const Intro = styled.body({
+const Intro = styled.div({
   margin: '4% 0 auto',
   height: '500',
   width: '300',
