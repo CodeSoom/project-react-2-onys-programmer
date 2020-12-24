@@ -29,3 +29,15 @@ export function addCategories() {
     type: 'addCategories',
   };
 }
+
+export function setStatus() {
+  return {
+    type: 'setStatus',
+  };
+}
+
+export function addExperience() {
+  return {
+    type: 'addExperience',
+  };
+}

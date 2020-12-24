@@ -10,6 +10,10 @@ const initialState = {
     category2: '',
     category3: '',
   },
+  status: {
+    level: '1',
+    experience: '0',
+  },
 };
 
 const reducers = {
@@ -35,7 +39,7 @@ const reducers = {
     };
   },
 
-  changeCategoryField(state, { payload: { name, value }}) {
+  changeCategoryField(state, { payload: { name, value } }) {
     return {
       ...state,
       categories: {
@@ -56,7 +60,30 @@ const reducers = {
         category3: '',
       }
     };
-  }
+  },
+
+  setStatus(state) {
+    const { status, level, experience } = state;
+    return {
+      ...state,
+      status: {
+        ...status, 
+        level,
+        experience,
+      }
+    }
+  },
+
+  addExperience(state) {
+    const { experience } = state;
+    return {
+      ...state,
+      status: {
+        ...status,
+        experience: experience+1,
+      },
+    };
+  },
 };
 
 function defaultReducer(state) {

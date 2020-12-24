@@ -2,11 +2,13 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
+import Experience from './Experience';
+
 const Header = styled.header({
   margin: '2% 2% 0 2%',
   width: '96%',
   textAlign: 'left',
-})
+});
 
 const Intro = styled.div({
   margin: '0 auto',
@@ -19,13 +21,19 @@ const Buttons = styled.div({
   margin: '2% auto',
   Width: '15%',
   textAlign: 'center',
-})
+});
 
 const Button = styled.div({
   margin: '17% auto',
   Width: '15%',
   textAlign: 'center',
-})
+});
+
+const ProgressBar = styled.div({
+  margin: '3% auto',
+  width: '20%',
+  textAlign: 'center',
+});
 
 export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
   const { userName, objectHabit } = habitInfo[0];
@@ -55,6 +63,9 @@ export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
           </button>
         </Button>
       </Buttons>
+      <ProgressBar>
+        <Experience />
+      </ProgressBar>
     </>
   );
 }

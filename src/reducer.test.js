@@ -7,6 +7,8 @@ import {
   setHabit,
   changeCategoryField,
   addCategories,
+  setStatus,
+  addExperience,
 } from './actions'
 
 describe('reducer', () => {
@@ -50,7 +52,7 @@ describe('reducer', () => {
   describe('changeCategoryField', () => {
     it('changes each category form', () => {
       const initialState = {
-        categories: { 
+        categories: {
           category1: '',
           category2: '',
           category3: '',
@@ -83,6 +85,37 @@ describe('reducer', () => {
     });
   });
 
+  describe('setStatus', () => {
+    it('sets status', () => {
+      const initialState = {
+        status: {
+          level: '1',
+          experience: '0',
+        },
+      };
+
+      const state = reducer(initialState, setStatus());
+
+      expect(state.status.level).toBe('1');
+      expect(state.status.experience).toBe('0');
+    });
+  });
+
+  describe('addExperience', () => {
+    it('adds Experience value', () => {
+      const initialState = {
+        status: {
+          level: '1',
+          experience: '0',
+        },
+      };
+
+      const state = reducer(initialState, addExperience());
+
+      expect(state.status.experience).toBe('1');
+    });
+  });
+
   context('when previous state is undefined', () => {
     const initialState = {
       habitInfo: [],
@@ -95,7 +128,11 @@ describe('reducer', () => {
         category1: '',
         category2: '',
         category3: '',
-      }
+      },
+      status: {
+        level: '1',
+        experience: '0',
+      },
     };
 
     it('returns initialState', () => {
