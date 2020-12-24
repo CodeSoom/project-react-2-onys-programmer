@@ -12,21 +12,21 @@ const Header = styled.header({
   textAlign: 'left',
 });
 
-const Intro = styled.body({
+const Intro = styled.div({
   margin: '0 auto',
   width: '96%',
   fontSize: '0.95em',
   textAlign: 'left',
 });
 
-const Container = styled.body({
+const Container = styled.div({
   margin: '5% auto',
   width: '96%',
   fontSize: '1.6em',
   textAlign: 'center',
 });
 
-const Inputs = styled.body({
+const Inputs = styled.div({
   margin: '0 auto',
   height: '500',
   width: '300',

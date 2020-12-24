@@ -6,7 +6,7 @@ import GuideMessage from './GuideMessage';
 
 import { Link } from 'react-router-dom';
 
-const Inputs = styled.body({
+const Inputs = styled.div({
   margin: '2% 0 auto',
   height: '500',
   width: '300',

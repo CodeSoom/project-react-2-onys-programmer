@@ -13,13 +13,13 @@ const Header = styled.header({
   textAlign: 'center',
 })
 
-const Container = styled.body({
+const Container = styled.div({
   margin: '0 auto',
   width: '60%',
   textAlign: 'center',
 })
 
-const HeaderImage = styled.body({
+const HeaderImage = styled.div({
   margin: '4% 0 auto',
   height: '500',
   width: '300',
