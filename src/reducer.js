@@ -11,8 +11,8 @@ const initialState = {
     category3: '',
   },
   status: {
-    level: '1',
-    experience: '0',
+    level: 1,
+    experience: 0,
   },
 };
 
@@ -63,15 +63,13 @@ const reducers = {
   },
 
   setStatus(state) {
-    const { status, level, experience } = state;
+    const { status } = state;
     return {
       ...state,
       status: {
-        ...status, 
-        level,
-        experience,
-      }
-    }
+        ...status,
+      },
+    };
   },
 
   addExperience(state) {

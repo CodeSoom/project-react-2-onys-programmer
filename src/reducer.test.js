@@ -89,15 +89,15 @@ describe('reducer', () => {
     it('sets status', () => {
       const initialState = {
         status: {
-          level: '1',
-          experience: '0',
+          level: 1,
+          experience: 0,
         },
       };
 
       const state = reducer(initialState, setStatus());
 
-      expect(state.status.level).toBe('1');
-      expect(state.status.experience).toBe('0');
+      expect(state.status.level).toBe(1);
+      expect(state.status.experience).toBe(0);
     });
   });
 
@@ -105,14 +105,14 @@ describe('reducer', () => {
     it('adds Experience value', () => {
       const initialState = {
         status: {
-          level: '1',
-          experience: '0',
+          level: 1,
+          experience: 0,
         },
       };
 
       const state = reducer(initialState, addExperience());
 
-      expect(state.status.experience).toBe('1');
+      expect(state.status.experience).toBe(1);
     });
   });
 
@@ -130,8 +130,8 @@ describe('reducer', () => {
         category3: '',
       },
       status: {
-        level: '1',
-        experience: '0',
+        level: 1,
+        experience: 0,
       },
     };
 
