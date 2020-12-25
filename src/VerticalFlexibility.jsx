@@ -30,8 +30,9 @@ const Button = styled.div({
 });
 
 const ProgressBar = styled.div({
-  margin: '3% auto',
-  width: '20%',
+  margin: '0 auto',
+  width: '50%',
+  fontSize: '1.5em',
   textAlign: 'center',
 });
 
