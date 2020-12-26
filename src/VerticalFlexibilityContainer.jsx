@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addExperience } from './actions';
 
 import VerticalFlexibility from './VerticalFlexibility';
 
@@ -10,10 +11,17 @@ export default function VerticalFlexibilityContainer() {
     categoryInfo: state.categoryInfo,
   }))
 
+  const dispatch = useDispatch();
+
+  function handleClick() {
+    dispatch(addExperience);
+  };
+
   return (
     <VerticalFlexibility 
     habitInfo={habitInfo}
     categoryInfo={categoryInfo}
+    onClick={handleClick}
     />
   );
 }

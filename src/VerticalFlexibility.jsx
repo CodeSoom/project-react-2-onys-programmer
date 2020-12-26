@@ -36,7 +36,7 @@ const ProgressBar = styled.div({
   textAlign: 'center',
 });
 
-export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
+export default function VerticalFlexibility({ habitInfo, categoryInfo, onClick }) {
   const { userName, objectHabit } = habitInfo[0];
 
   const { category1, category2, category3 } = categoryInfo[0];
@@ -51,15 +51,24 @@ export default function VerticalFlexibility({ habitInfo, categoryInfo }) {
       </Intro>
       <Buttons>
         <Button>
-          <button>
+          <button
+          type="button"
+          onClick={onClick}
+          >
             {category1}
           </button>
           ---
-          <button>
+          <button
+          type="button"
+          onClick={onClick}
+          >
             {category2}
           </button>
           ---
-          <button>
+          <button
+          type="button"
+          onClick={onClick}
+          >
             {category3}
           </button>
         </Button>
