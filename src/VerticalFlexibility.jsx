@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import Experience from './Experience';
+import ExperienceContainer from './ExperienceContainer';
 
 const Header = styled.header({
   margin: '2% 2% 0 2%',
@@ -52,29 +52,29 @@ export default function VerticalFlexibility({ habitInfo, categoryInfo, onClick }
       <Buttons>
         <Button>
           <button
-          type="button"
-          onClick={onClick}
+            type="button"
+            onClick={onClick}
           >
             {category1}
           </button>
           ---
           <button
-          type="button"
-          onClick={onClick}
+            type="button"
+            onClick={onClick}
           >
             {category2}
           </button>
           ---
           <button
-          type="button"
-          onClick={onClick}
+            type="button"
+            onClick={onClick}
           >
             {category3}
           </button>
         </Button>
       </Buttons>
       <ProgressBar>
-        <Experience />
+        <ExperienceContainer />
       </ProgressBar>
     </>
   );

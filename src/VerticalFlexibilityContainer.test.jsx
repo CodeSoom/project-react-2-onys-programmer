@@ -25,6 +25,10 @@ test('VerticalFlexibilityContainer', () => {
       categories,
     ],
     categories,
+    status: {
+      level: 1,
+      experience: 0,
+    },
   }));
 
   const { queryByText } = render((
@@ -38,5 +42,7 @@ test('VerticalFlexibilityContainer', () => {
 
   fireEvent.click(queryByText(/산책하기/));
 
-  expect(dispatch).toBeCalled();
+  expect(dispatch).toBeCalledWith({
+    type: 'addExperience',
+  });
 });

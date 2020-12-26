@@ -12,6 +12,7 @@ test('VerticalFlexibility', () => {
   const habitInfo = [
     habit,
   ]
+
   const categoryInfo = [
     categories,
   ];
@@ -19,11 +20,11 @@ test('VerticalFlexibility', () => {
   const handleClick = jest.fn();
 
   const { queryByText, queryByRole } = render((
-      <VerticalFlexibility
+    <VerticalFlexibility
       habitInfo={habitInfo}
       categoryInfo={categoryInfo}
       onClick={handleClick}
-      />
+    />
   ));
 
   expect(queryByText(/수직적 유연성/)).not.toBeNull();
@@ -33,7 +34,7 @@ test('VerticalFlexibility', () => {
   expect(queryByText(/팔굽혀펴기/)).not.toBeNull();
 
   fireEvent.click(queryByText(/산책하기/));
-  
+
   expect(handleClick).toBeCalled();
 
   expect(queryByText(/LV/)).not.toBeNull();

@@ -66,9 +66,7 @@ const reducers = {
     const { status } = state;
     return {
       ...state,
-      status: {
-        ...status,
-      },
+      status,
     };
   },
 
