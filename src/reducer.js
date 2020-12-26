@@ -73,7 +73,7 @@ const reducers = {
   },
 
   addExperience(state) {
-    const { experience } = state;
+    const { experience } = state.status;
     return {
       ...state,
       status: {
