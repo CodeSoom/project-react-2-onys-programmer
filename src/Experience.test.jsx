@@ -5,10 +5,17 @@ import { render } from '@testing-library/react';
 import Experience from './Experience';
 
 test('Experience', () => {
-  const { queryByText, queryByRole } = render((
-    <Experience />
-    ));
+  const status = {
+    level: 1,
+    experience: 0,
+  }
 
-    expect(queryByText(/LV/)).not.toBeNull();
-    expect(queryByRole('experienceBar')).not.toBeNull();
+  const { queryByText, queryByRole } = render((
+    <Experience
+      status={status}
+    />
+  ));
+
+  expect(queryByText(/LV/)).not.toBeNull();
+  expect(queryByRole('experienceBar')).not.toBeNull();
 });

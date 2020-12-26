@@ -34,6 +34,10 @@ function renderApp({ path }) {
         categories,
       ],
       categories,
+      status: {
+        level: 1,
+        experience: 0,
+      },
     }));
   });
 

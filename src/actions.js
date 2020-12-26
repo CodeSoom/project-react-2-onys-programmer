@@ -30,9 +30,12 @@ export function addCategories() {
   };
 }
 
-export function setStatus() {
+export function setStatus(status) {
   return {
     type: 'setStatus',
+    payload: {
+      status,
+    }
   };
 }
 

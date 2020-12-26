@@ -94,7 +94,7 @@ describe('reducer', () => {
         },
       };
 
-      const state = reducer(initialState, setStatus());
+      const state = reducer(initialState, setStatus(status));
 
       expect(state.status.level).toBe(1);
       expect(state.status.experience).toBe(0);
