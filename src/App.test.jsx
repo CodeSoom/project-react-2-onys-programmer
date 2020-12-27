@@ -75,14 +75,6 @@ describe('App', () => {
     });
   });
 
-  context('with path /habit-matrix', () => {
-    it('renders habit matrix page', () => {
-      const { queryByText } = renderApp({ path: '/habit-matrix' })
-
-      expect(queryByText(/님이 갖게 될 습관은/)).not.toBeNull();
-    });
-  });
-
   context('with path /horizontal-flexibility', () => {
     it('renders HorizontalFlexibilityContainer', () => {
       const { getByText } = renderApp({ path: '/horizontal-flexibility' })
