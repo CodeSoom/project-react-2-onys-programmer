@@ -2,6 +2,7 @@ import React from 'react';
 
 import habit from '../fixtures/habit';
 import categories from '../fixtures/categories';
+import status from '../fixtures/status';
 
 import { fireEvent, render } from '@testing-library/react';
 
@@ -24,6 +25,7 @@ test('GainProficiency', () => {
       habitInfo={habitInfo}
       categoryInfo={categoryInfo}
       onClick={handleClick}
+      status={status}
     />
   ));
 
