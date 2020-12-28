@@ -83,11 +83,11 @@ describe('App', () => {
     });
   });
 
-  context('with path /vertical-flexibility', () => {
+  context('with path /gain-proficiency', () => {
     it('renders verticalflexibility page', () => {
-      const { getByText } = renderApp({ path: '/vertical-flexibility' })
+      const { getByText } = renderApp({ path: '/gain-proficiency' })
 
-      expect(getByText(/수직적 유연성/)).not.toBeNull();
+      expect(getByText(/숙련도/)).not.toBeNull();
     });
   });
 

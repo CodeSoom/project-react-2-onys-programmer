@@ -5,9 +5,9 @@ import categories from '../fixtures/categories';
 
 import { fireEvent, render } from '@testing-library/react';
 
-import VerticalFlexibility from './VerticalFlexibility';
+import GainProficiency from './GainProficiency';
 
-test('VerticalFlexibility', () => {
+test('GainProficiency', () => {
 
   const habitInfo = [
     habit,
@@ -20,14 +20,14 @@ test('VerticalFlexibility', () => {
   const handleClick = jest.fn();
 
   const { queryByText, queryByRole } = render((
-    <VerticalFlexibility
+    <GainProficiency
       habitInfo={habitInfo}
       categoryInfo={categoryInfo}
       onClick={handleClick}
     />
   ));
 
-  expect(queryByText(/수직적 유연성/)).not.toBeNull();
+  expect(queryByText(/숙련도/)).not.toBeNull();
   expect(queryByText(/운동하기/)).not.toBeNull();
   expect(queryByText(/산책하기/)).not.toBeNull();
   expect(queryByText(/헬스장 가기/)).not.toBeNull();

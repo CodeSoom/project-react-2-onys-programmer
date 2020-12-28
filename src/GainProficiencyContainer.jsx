@@ -6,9 +6,9 @@ import {
   addExperience,
 } from './actions';
 
-import VerticalFlexibility from './VerticalFlexibility';
+import GainProficiency from './GainProficiency';
 
-export default function VerticalFlexibilityContainer() {
+export default function GainProficiencyContainer() {
   const dispatch = useDispatch();
 
   const { habitInfo, categoryInfo } = useSelector((state) => ({
@@ -21,7 +21,7 @@ export default function VerticalFlexibilityContainer() {
   };
 
   return (
-    <VerticalFlexibility 
+    <GainProficiency 
     habitInfo={habitInfo}
     categoryInfo={categoryInfo}
     onClick={handleClick}
