@@ -7,11 +7,11 @@ import categories from '../fixtures/categories';
 
 import { fireEvent, render } from '@testing-library/react';
 
-import VerticalFlexibilityContainer from './VerticalFlexibilityContainer';
+import GainProficiencyContainer from './GainProficiencyContainer';
 
 jest.mock('react-redux');
 
-test('VerticalFlexibilityContainer', () => {
+test('GainProficiencyContainer', () => {
   const dispatch = jest.fn();
 
   useDispatch.mockImplementation(() => dispatch)
@@ -32,10 +32,10 @@ test('VerticalFlexibilityContainer', () => {
   }));
 
   const { queryByText } = render((
-      <VerticalFlexibilityContainer />
+      <GainProficiencyContainer />
   ));
 
-  expect(queryByText(/수직적 유연성/)).not.toBeNull();
+  expect(queryByText(/숙련도/)).not.toBeNull();
   expect(queryByText(/산책하기/)).not.toBeNull();
   expect(queryByText(/헬스장 가기/)).not.toBeNull();
   expect(queryByText(/팔굽혀펴기/)).not.toBeNull();

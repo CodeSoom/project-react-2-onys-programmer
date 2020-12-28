@@ -79,7 +79,7 @@ export default function CategoryForm({ categories, onChange, onClick }) {
           type="button"
           onClick={onClick}
         >
-          <Link to="vertical-flexibility">
+          <Link to="gain-proficiency">
             입력
           </Link>
         </button>

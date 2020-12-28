@@ -36,7 +36,7 @@ const ProgressBar = styled.div({
   textAlign: 'center',
 });
 
-export default function VerticalFlexibility({ habitInfo, categoryInfo, onClick }) {
+export default function GainProficiency({ habitInfo, categoryInfo, onClick }) {
   const { userName, objectHabit } = habitInfo[0];
 
   const { category1, category2, category3 } = categoryInfo[0];
@@ -47,7 +47,7 @@ export default function VerticalFlexibility({ habitInfo, categoryInfo, onClick }
         <h1>{userName}님이 갖게 될 습관은 매일 {objectHabit}입니다!</h1>
       </Header>
       <Intro>
-        <h2>수직적 유연성 확보하기!</h2>
+        <h2>습관의 숙련도를 올리세요!</h2>
       </Intro>
       <Buttons>
         <Button>
