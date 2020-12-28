@@ -11,9 +11,10 @@ import GainProficiency from './GainProficiency';
 export default function GainProficiencyContainer() {
   const dispatch = useDispatch();
 
-  const { habitInfo, categoryInfo } = useSelector((state) => ({
+  const { habitInfo, categoryInfo, status } = useSelector((state) => ({
     habitInfo: state.habitInfo,
     categoryInfo: state.categoryInfo,
+    status: state.status,
   }))
 
   function handleClick() {
@@ -25,6 +26,7 @@ export default function GainProficiencyContainer() {
     habitInfo={habitInfo}
     categoryInfo={categoryInfo}
     onClick={handleClick}
+    status={status}
     />
   );
 }

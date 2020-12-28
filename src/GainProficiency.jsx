@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import ExperienceContainer from './ExperienceContainer';
+import Experience from './Experience';
 
 const Header = styled.header({
   margin: '2% 2% 0 2%',
@@ -36,7 +36,7 @@ const ProgressBar = styled.div({
   textAlign: 'center',
 });
 
-export default function GainProficiency({ habitInfo, categoryInfo, onClick }) {
+export default function GainProficiency({ habitInfo, categoryInfo, onClick, status }) {
   const { userName, objectHabit } = habitInfo[0];
 
   const { category1, category2, category3 } = categoryInfo[0];
@@ -74,7 +74,9 @@ export default function GainProficiency({ habitInfo, categoryInfo, onClick }) {
         </Button>
       </Buttons>
       <ProgressBar>
-        <ExperienceContainer />
+        <Experience
+          status={status}
+        />
       </ProgressBar>
     </>
   );
