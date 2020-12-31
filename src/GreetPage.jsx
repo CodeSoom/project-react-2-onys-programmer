@@ -30,7 +30,7 @@ export default function GreetPage() {
       <h1>Flexible에 오신 것을 환영합니다!</h1>
     </Container>
     <Intro>
-      <p>Flexible은 귀하의 발전에 최상의 assist를 제공하는 utility가 될 것입니다.</p>
+      <p>Flexible은 신개념 습관 형성 프로그램입니다.</p>
     </Intro>
     <Button>
       <button><Link to="/habit-create">튜토리얼 시작</Link></button>
