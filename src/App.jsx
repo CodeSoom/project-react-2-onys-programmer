@@ -8,7 +8,7 @@ import {
 import HomePage from './HomePage';
 import GreetPage from './GreetPage';
 import HabitCreateContainer from './HabitCreateContainer';
-import HorizontalFlexibility from './HorizontalFlexibility';
+import CategoryCreateContainer from './CategoryCreateContainer';
 import GainProficiencyContainer from './GainProficiencyContainer';
 import NotFoundPage from './NotFoundPage';
 
@@ -20,7 +20,7 @@ export default function App() {
         <Route exact path="/" component={HomePage} />
         <Route exact path="/greet" component={GreetPage} />
         <Route exact path="/habit-create" component={HabitCreateContainer} />
-        <Route exact path="/horizontal-flexibility" component={HorizontalFlexibility} />
+        <Route exact path="/horizontal-flexibility" component={CategoryCreateContainer} />
         <Route exact path="/gain-proficiency" component={GainProficiencyContainer} />
         <Route component={NotFoundPage} />
       </Switch>
