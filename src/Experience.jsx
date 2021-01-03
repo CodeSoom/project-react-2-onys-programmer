@@ -1,10 +1,17 @@
 import React from 'react';
 
 export default function Experience({ status }) {
+  const level = Math.floor(status.experience/7+1);
+  const experienceOfLevel = status.experience%7;
+  const maxValueOfExperienceBar = '7';
   return (
     <>
-      <p>LV.{Math.floor(status.experience/7+1)}</p>
-      <progress role="experienceBar" value={status.experience%7} max="7"></progress>
+      <p>LV.{level}</p>
+      <progress 
+      role="experienceBar" 
+      value={experienceOfLevel} 
+      max={maxValueOfExperienceBar}
+      />
     </>
   );
 }
