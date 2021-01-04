@@ -43,6 +43,6 @@ test('GainProficiencyContainer', () => {
   fireEvent.click(queryByText(/산책하기/));
 
   expect(dispatch).toBeCalledWith({
-    type: 'addExperience',
+    type: 'showModal',
   });
 });

@@ -44,3 +44,9 @@ export function addExperience() {
     type: 'addExperience',
   };
 }
+
+export function showModal() {
+  return {
+    type: 'showModal',
+  };
+}
