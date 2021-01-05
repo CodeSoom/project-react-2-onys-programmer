@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import flexible_header from './images/flexible_header.jpg';
+import skillBook from './images/skillBook.jpeg';
 
 const Header = styled.header({
   margin: '0 auto',
@@ -43,7 +43,7 @@ export default function HomePage() {
       </Container>
       <HeaderImage>
         <img
-          src={flexible_header}
+          src={skillBook}
           width="300"
         />
       </HeaderImage>
