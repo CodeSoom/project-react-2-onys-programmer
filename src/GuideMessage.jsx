@@ -26,7 +26,7 @@ export default function GuideMessage() {
   return (
     <div>
       <Header>
-        <h1>습관 생성중...</h1>
+        <h1>습관 생성중... 📔</h1>
       </Header>
       <Intro>
         <h3>Flexible은 탄력적 습관 형성을 추구합니다.</h3>
