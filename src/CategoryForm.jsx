@@ -48,7 +48,7 @@ export default function CategoryForm({ categories, onChange, onClick }) {
         <h3>세 가지 카테고리를 정하세요</h3>
       </Intro>
       <Container>
-        <p>하나의 습관에도 여러 카테고리가 있습니다.</p>
+        <p>축하합니다! 습관을 형성했습니다!</p>
       </Container>
       <GlobalExample />
       <Inputs>
