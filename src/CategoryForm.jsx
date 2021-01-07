@@ -26,8 +26,15 @@ const Container = styled.div({
   textAlign: 'center',
 });
 
+const Instruction = styled.div({
+  margin: '8% 2% 1% 2%',
+  width: '96%',
+  fontSize: '1.25em',
+  textAlign: 'center',
+});
+
 const Inputs = styled.div({
-  margin: '0 auto',
+  margin: '2% auto',
   height: '500',
   width: '300',
   textAlign: 'center',
@@ -50,7 +57,9 @@ export default function CategoryForm({ categories, onChange, onClick }) {
       <Container>
         <p>축하합니다! 습관을 형성했습니다!</p>
       </Container>
-      <GlobalExample />
+      <Instruction>
+        <p>습관을 다양한 세 종류로 나누어보세요</p>
+      </Instruction>
       <Inputs>
         <input
           type="text"
@@ -84,6 +93,7 @@ export default function CategoryForm({ categories, onChange, onClick }) {
           </Link>
         </button>
       </Inputs>
+      <GlobalExample />
     </>
   );
 } 
