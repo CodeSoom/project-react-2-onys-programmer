@@ -2,6 +2,8 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
+import skillBook from './images/skillBook.jpeg';
+
 import GlobalExample from './GlobalExample';
 
 import { Link } from 'react-router-dom';
@@ -25,6 +27,13 @@ const Container = styled.div({
   fontSize: '1.6em',
   textAlign: 'center',
 });
+
+const HabitImage = styled.div({
+  margin: '4% 0 auto',
+  height: '100',
+  width: '300',
+  textAlign: 'center',
+})
 
 const Instruction = styled.div({
   margin: '8% 2% 1% 2%',
@@ -57,6 +66,12 @@ export default function CategoryForm({ categories, onChange, onClick }) {
       <Container>
         <p>축하합니다! 습관을 형성했습니다!</p>
       </Container>
+      <HabitImage>
+        <img
+          src={skillBook}
+          width="225"
+        />
+      </HabitImage>
       <Instruction>
         <p>습관을 다양한 세 종류로 나누어보세요</p>
       </Instruction>
