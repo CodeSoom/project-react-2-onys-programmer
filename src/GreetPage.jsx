@@ -6,21 +6,28 @@ import controller from './images/controller.jpg';
 
 import { Link } from 'react-router-dom';
 
-const Container = styled.div({
-  margin: '5% auto',
-  width: '60%',
+const Intro = styled.div({
+  margin: '1% 2% auto',
+  height: '500',
+  width: '300',
+  textAlign: 'left',
+});
+
+const Header = styled.div({
+  margin: '5% 0 12% 0',
+  width: '100%',
   textAlign: 'center',
 });
 
-const Intro = styled.div({
-  margin: '4% 0 auto',
+const Container = styled.div({
+  margin: '1% 5% auto',
   height: '500',
   width: '300',
   textAlign: 'center',
 });
 
 const Instruction = styled.div({
-  margin: '4% 0 auto',
+  margin: '1% 0 10% 0',
   height: '500',
   width: '300',
   textAlign: 'center',
@@ -34,7 +41,7 @@ const MainImage = styled.div({
 })
 
 const Button = styled.div({
-  margin: '2% auto',
+  margin: '1% auto',
   Width: '15%',
   textAlign: 'center',
 });
@@ -42,28 +49,26 @@ const Button = styled.div({
 export default function GreetPage() {
   return (
     <>
-      <Container>
-        <h1>Flexible에 오신 것을 환영합니다!</h1>
-      </Container>
       <Intro>
         <p>Flexible은 신개념 습관 형성 프로그램입니다.</p>
       </Intro>
-      <Instruction>
+      <Header>
+        <h1>Flexible에 오신 것을 환영합니다!</h1>
+      </Header>
+      <Container>
         <p>인생이라는 게임에서, <b>습관</b>은 여러분의 강력한 패시브 스킬입니다</p>
-        <MainImage>
-          <img
-            src={controller}
-            width="350"
-          />
-        </MainImage>
-        <p>인생의 컨트롤러는 준비되어있습니다</p>
-      </Instruction>
-
+      </Container>
       <Instruction>
         <p>습관을 만들고 매일 성장시키세요!</p>
       </Instruction>
+      <MainImage>
+        <Link to="/habit-create"><img
+          src={controller}
+          width="280"
+        /></Link>
+      </MainImage>
       <Button>
-        <button><Link to="/habit-create">튜토리얼 시작</Link></button>
+        <p><Link to="/habit-create">인생의 컨트롤러</Link>는 준비되어있습니다.</p>
       </Button>
     </>
   );
