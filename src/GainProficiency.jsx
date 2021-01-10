@@ -2,6 +2,8 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
+import Habit from './Habit';
+
 import Experience from './Experience';
 
 const Header = styled.header({
@@ -24,7 +26,7 @@ const Buttons = styled.div({
 });
 
 const Button = styled.div({
-  margin: '17% auto',
+  margin: '1% auto',
   Width: '15%',
   textAlign: 'center',
 });
@@ -49,6 +51,7 @@ export default function GainProficiency({ habitInfo, categoryInfo, onClick, stat
       <Intro>
         <h2>습관의 숙련도를 올리세요!</h2>
       </Intro>
+      <Habit />
       <Buttons>
         <Button>
           <button
