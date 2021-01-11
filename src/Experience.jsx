@@ -6,12 +6,13 @@ export default function Experience({ status }) {
   const maxValueOfExperienceBar = '7';
   return (
     <>
-      <p>LV.{level}</p>
-      <progress 
+      <p>
+      LV.{level}  <progress 
       role="experienceBar" 
       value={experienceOfLevel} 
       max={maxValueOfExperienceBar}
       />
+      </p>
     </>
   );
 }
