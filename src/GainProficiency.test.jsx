@@ -20,7 +20,7 @@ test('GainProficiency', () => {
 
   const handleClick = jest.fn();
 
-  const { queryByText, queryByRole } = render((
+  const { queryByText, queryByRole, queryAllByText } = render((
     <GainProficiency
       habitInfo={habitInfo}
       categoryInfo={categoryInfo}
@@ -30,7 +30,7 @@ test('GainProficiency', () => {
   ));
 
   expect(queryByText(/숙련도/)).not.toBeNull();
-  expect(queryByText(/운동하기/)).not.toBeNull();
+  expect(queryAllByText(/운동하기/)).not.toBeNull();
   expect(queryByText(/산책하기/)).not.toBeNull();
   expect(queryByText(/헬스장 가기/)).not.toBeNull();
   expect(queryByText(/팔굽혀펴기/)).not.toBeNull();

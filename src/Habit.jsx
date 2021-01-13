@@ -20,6 +20,7 @@ export default function Habit() {
         width="225"
       />
     </HabitImage>
+    <p>습관 이름 : 운동하기</p>
     </>
   );
 }
