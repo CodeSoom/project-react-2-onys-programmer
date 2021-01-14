@@ -2,9 +2,8 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import Habit from './Habit';
-
 import Experience from './Experience';
+import HabitContainer from './HabitContainer';
 
 const Header = styled.header({
   margin: '2% 2% 0 2%',
@@ -51,7 +50,7 @@ export default function GainProficiency({ habitInfo, categoryInfo, onClick, stat
       <Intro>
         <h2>습관의 숙련도를 올리세요!</h2>
       </Intro>
-      <Habit />
+      <HabitContainer />
       <Buttons>
         <Button>
           <button

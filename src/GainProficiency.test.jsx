@@ -12,7 +12,7 @@ test('GainProficiency', () => {
 
   const habitInfo = [
     habit,
-  ]
+  ];
 
   const categoryInfo = [
     categories,

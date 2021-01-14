@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from '@emotion/styled';
 
-import Habit from './Habit';
+import HabitContainer from './HabitContainer';
 
 import GlobalExample from './GlobalExample';
 
@@ -59,7 +59,7 @@ export default function CategoryForm({ categories, onChange, onClick }) {
       <Container>
         <p>축하합니다! 습관을 형성했습니다!</p>
       </Container>
-      <Habit/>
+      <HabitContainer />
       <Instruction>
         <p>습관을 다양한 세 종류로 나누어보세요</p>
       </Instruction>
