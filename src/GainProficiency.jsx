@@ -18,6 +18,13 @@ const Intro = styled.div({
   textAlign: 'left',
 });
 
+const Container = styled.div({
+  margin: '0 auto',
+  width: '96%',
+  fontSize: '0.95em',
+  textAlign: 'center',
+});
+
 const Buttons = styled.div({
   margin: '2% auto',
   Width: '15%',
@@ -50,7 +57,9 @@ export default function GainProficiency({ habitInfo, categoryInfo, onClick, stat
       <Intro>
         <h2>습관의 숙련도를 올리세요!</h2>
       </Intro>
-      <HabitContainer />
+      <Container>
+        <HabitContainer />
+      </Container>
       <Buttons>
         <Button>
           <button
